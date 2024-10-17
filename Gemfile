@@ -12,6 +12,7 @@ gem "puma", ">= 5.0"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 gem "bootstrap", '~> 5.0.2'
+gem "devise-bootstrap-views"
 gem 'sassc-rails'
 gem 'jsbundling-rails'
 # Use Redis adapter to run Action Cable in production
