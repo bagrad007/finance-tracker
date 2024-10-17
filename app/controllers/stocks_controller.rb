@@ -10,6 +10,6 @@ class StocksController < ApplicationController
 
   def index
     client = TwelvedataRuby.client
-    @stocks = client.stocks(exchange: 'NASDAQ')
+    @stocks = client.stocks(exchange: "NASDAQ")
   end
 end

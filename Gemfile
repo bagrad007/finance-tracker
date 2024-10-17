@@ -11,13 +11,14 @@ gem "sqlite3", ">= 1.4"
 gem "puma", ">= 5.0"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
-gem "bootstrap", '~> 5.0.2'
+gem "bootstrap", "~> 5.0.2"
 gem "devise-bootstrap-views"
-gem 'sassc-rails'
-gem 'jsbundling-rails'
-gem 'twelvedata_ruby'
-gem 'dotenv-rails', groups: [:development, :test]
-gem 'csv'
+gem "sassc-rails"
+gem "jsbundling-rails"
+gem "twelvedata_ruby"
+gem "dotenv-rails", groups: [ :development, :test ]
+gem "csv"
+gem "mutex_m"
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 
