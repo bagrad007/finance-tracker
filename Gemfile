@@ -19,6 +19,7 @@ gem "twelvedata_ruby"
 gem "dotenv-rails", groups: [ :development, :test ]
 gem "csv"
 gem "mutex_m"
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.8'
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 
@@ -40,6 +41,7 @@ gem "bootsnap", require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
+  gem "byebug"
 
   # Static analysis for security vulnerabilities [https://brakemanscanner.org/]
   gem "brakeman", require: false

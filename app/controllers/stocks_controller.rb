@@ -4,8 +4,18 @@ class StocksController < ApplicationController
     @stock = client.quote(symbol: params[:id])
   end
   def search
-    client = TwelvedataRuby.client
-    @stocks = client.search(symbol: params[:search])
+    if params[:stock].present?
+      @stock = Stock.new_lookup(params[:stock])
+      if @stock
+        render "users/my_portfolio"
+      else
+        flash[:alert] = "Please use a valid Symbol"
+        redirect_to my_portfolio_path
+      end
+    else
+      flash[:alert] = "Please use a valid Symbol"
+      redirect_to my_portfolio_path
+    end
   end
 
   def index
