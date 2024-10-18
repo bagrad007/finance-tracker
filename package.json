@@ -2,11 +2,9 @@
   "name": "app",
   "private": true,
   "devDependencies": {
-    "esbuild": "^0.24.0",
-    "webpack": "^5.95.0",
-    "webpack-cli": "^5.1.4"
+    "esbuild": "^0.24.0"
   },
   "scripts": {
-    "build": "webpack --config webpack.config.js"
+    "build": "esbuild app/javascript/*.* --bundle --sourcemap --format=esm --outdir=app/assets/builds --public-path=/assets"
   }
 }
