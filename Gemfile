@@ -12,6 +12,7 @@ gem 'pg', '>= 1.2.3'
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
 gem 'devise'
+gem 'devise-bootstrap-views', '~> 1.0'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
