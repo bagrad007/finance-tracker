@@ -10,11 +10,14 @@ gem 'rails', '~> 6.1.0'
 gem 'pg', '>= 1.2.3'
 
 # Use Puma as the app server
-gem 'puma', '~> 5.0'
 gem 'devise'
 gem 'devise-bootstrap-views', '~> 1.0'
-
+gem 'dotenv-rails', groups: %i[development test]
+gem 'font-awesome-rails'
+gem 'puma', '~> 5.0'
+gem 'twelvedata_ruby'
 # Use SCSS for stylesheets
+gem 'rubocop'
 gem 'sass-rails', '>= 6'
 
 # Use Webpacker for JavaScript
@@ -31,13 +34,13 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 group :development, :test do
   # Debugger
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'byebug', platforms: %i[mri mingw x64_mingw]
 end
 
 group :development do
   # Interactive console on exception pages
-  gem 'web-console', '>= 4.0.0'
   gem 'listen', '~> 3.2'
+  gem 'web-console', '>= 4.0.0'
   # Spring speeds up development
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
@@ -52,4 +55,4 @@ group :test do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
