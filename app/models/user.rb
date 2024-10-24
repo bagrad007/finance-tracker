@@ -2,8 +2,6 @@ class User < ApplicationRecord
   has_many :user_stocks
   has_many :stocks, through: :user_stocks
 
-  # validates_uniqueness_of :name, :ticker, on: :create, message: "has already been taken"
-
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
@@ -19,5 +17,11 @@ class User < ApplicationRecord
 
   def under_stock_limit?
     (stocks.count < 10) ? true : false
+  end
+
+  def full_name
+    puts "#{first_name}: first name"
+    return "#{first_name} #{last_name}" if first_name || last_name
+    "Anonymous"
   end
 end
