@@ -1,4 +1,6 @@
 class Stock < ApplicationRecord
+  has_many :user_stocks
+  has_many :users, through: :user_stocks
   def self.new_lookup(ticker_symbol)
     client = TwelvedataRuby.client
     stock = client.stocks(exchange: 'NASDAQ', symbol: ticker_symbol).parsed_body[:data][0]
