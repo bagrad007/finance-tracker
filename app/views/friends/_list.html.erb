@@ -14,12 +14,14 @@
         </thead>
         <tbody>
             <% @friends.each do |friend| %>
-            <tr>
-            <td><%= friend.email %></td>
-            <td><%= friend.first_name %></td>
-            <td><%= friend.last_name %></td>
-            <td><%= link_to "Stop Following", friend_path(friend), class: "btn btn-warning", method: :delete %></td>
-            </tr>
+                <tr>
+                    <td><%= friend.email %></td>
+                    <td><%= friend.first_name %></td>
+                    <td><%= friend.last_name %></td>
+                    <td><%= link_to "View Profile", user_path(friend), class: "btn btn-success" %>
+                        <%= link_to "Stop Following", friend_path(friend), class: "btn btn-warning", method: :delete %>
+                    </td>
+                </tr>
             <% end %>
         </tbody>
         </table>

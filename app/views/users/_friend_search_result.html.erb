@@ -8,7 +8,7 @@
         <strong>First Name: <%= friend.full_name %></strong>
         <strong> Email: <%= friend.email %></strong>
         <strong> Actions: 
-          <%= link_to  "View Profile", "#", class: "btn btn-info" %>
+          <%= link_to  "View Profile", user_path(friend), class: "btn btn-info" %>
           <% if current_user.not_already_friends?(friend.id) %>
             <%= link_to  "Follow Friend?", friends_path(friend: friend), class: "btn btn-sm btn-success", method: :post%>
           <% else %>
